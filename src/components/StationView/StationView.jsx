@@ -3,6 +3,7 @@ import StationDetail from '../StationDetail/StationDetail'
 import Card from '../Card/Card'
 import DetailsPagination from '../DetailsPagination/DetailsPagination'
 import { useSelector } from 'react-redux'
+import MapView from '../MapView/MapView'
 import classes from './StationView.module.scss'
 
 const StationView = () => {
@@ -42,6 +43,9 @@ const StationView = () => {
 
   return (
     <section className={classes.station_wrapper}>
+        {Object.keys(selectedStation).length !== 0 && (
+            <MapView station={selectedStation}/>
+        )}
         <div className={classes.grid_wrapper}>
             <div className={classes.data_headers}>
                 <div className={classes.data_header}>ID</div>
