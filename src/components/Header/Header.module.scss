@@ -5,7 +5,13 @@ header {
     align-items: center;
     width: 100%;
     h1 {
-        text-decoration: none;
-        text-transform: uppercase;
+        a {
+            color: var(--theme-gray);
+            text-decoration: none;
+            text-transform: uppercase;
+            &:visited {
+                color: var(--theme-gray);
+            }
+        }
     }
 }
