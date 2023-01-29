@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './JourneyDetail.module.css'
+import classes from './JourneyDetail.module.scss'
 
 const JourneyDetail = (props) => {
   return (

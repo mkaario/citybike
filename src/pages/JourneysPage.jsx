@@ -1,10 +1,11 @@
 import {Fragment} from 'react'
+import JourneysView from '../components/JourneysView/JourneysView'
 
 const JourneysPage = () => {
   return (
     <Fragment>
         <div className='journeyspage_wrapper'>
-            Journeys
+            <JourneysView/>
         </div>
     </Fragment>
   )

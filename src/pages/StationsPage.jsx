@@ -1,10 +1,11 @@
 import {Fragment} from 'react'
+import StationView from '../components/StationView/StationView'
 
 const StationsPage = () => {
   return (
     <Fragment>
-        <div className='stationspage_wrapper'>
-            StationsPage
+        <div className="stations_wrapper">
+            <StationView/>
         </div>
     </Fragment>
   )
