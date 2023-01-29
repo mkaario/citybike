@@ -4,4 +4,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    .grid_wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column: 1 / span 5;
+        width: 100%;
+    }
 }
