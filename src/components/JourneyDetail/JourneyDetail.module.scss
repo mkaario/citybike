@@ -1,8 +1,30 @@
 .journey_detail {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--theme-light-gray);
     * {
+        padding: 0.5rem, 0.5rem;
         place-self: center stretch;
         text-align: center;
+    }
+    h3 {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0.2rem;
+        place-self: center stretch;
+        margin: 0;
+        .margin_number {
+            color: var(--theme-red);
+            place-self: center stretch;
+            padding: 0.2rem 0 0.2rem 0.3rem;
+        }
+    }
+    div {
+        place-self: center stretch;
+        padding: 0.2rem 0 0.2rem 0.3rem;
+        &.heavy {
+            font-weight: 800;
+        }
     }
 }
