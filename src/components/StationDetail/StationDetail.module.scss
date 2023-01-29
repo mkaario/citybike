@@ -1,0 +1,11 @@
+.station_detail {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+    border-bottom: 1px dashed #ccc;
+    * {
+        place-self: center stretch;
+        text-align: center;
+    }
+}
