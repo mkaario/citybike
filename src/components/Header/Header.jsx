@@ -1,7 +1,7 @@
-import { classes } from 'istanbul-lib-coverage'
-import {Fragment} from 'react'
+import { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import NavigationList from '../NavigationList/NavigationList'
+import classes from './Header.module.scss'
 
 const Header = () => {
   return (
