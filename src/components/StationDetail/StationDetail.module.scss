@@ -8,4 +8,35 @@
         place-self: center stretch;
         text-align: center;
     }
+    &:hover {
+        background: var(--theme-gray);
+        h3 {
+            color: var(--theme-light-gray);
+            .header_number {
+                color: #ffffff;
+            }
+        }
+        div {
+            color: #ffffff;
+        }
+    }
+    h3 {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 0.2rem;
+        place-self: center stretch;
+        margin: 0;
+        .header_number {
+            color: var(--theme-yellow);
+            place-self: center stretch;
+            padding: 0.2rem 0 0.2rem 0.1rem;
+        } 
+   }
+   div {
+    place-self: center stretch;
+    padding: 0.2rem 0 0.2rem 0.3rem;
+    &.heavy {
+        font-weight: 800;
+    }
+   }
 }
