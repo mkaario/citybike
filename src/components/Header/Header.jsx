@@ -77,7 +77,7 @@ const Header = () => {
         <header className={classes.header}>
             <h1>
 
-            <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/' end>CityBike</NavLink>
+            <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/' end><span className={classes.gray}>City</span><span className={classes.yellow}>Bike</span></NavLink>
             </h1>
 
         </header>

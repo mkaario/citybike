@@ -12,6 +12,15 @@ header {
             &:visited {
                 color: var(--theme-gray);
             }
+            .gray {
+                background: var(--theme-gray);
+                color: var(--theme-off-white);
+                padding: 0.1rem 0.3rem;
+            }
+            .yellow {
+                background: var(--theme-yellow);
+                padding: 0.1rem 0.3rem;
+            }
         }
     }
 }
