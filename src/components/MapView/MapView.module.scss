@@ -4,6 +4,8 @@
 }
 .station_header_details,
 .station_travel_details {
+    background: var(--theme-gray);
+    color: var(--theme-even-lighter-gray);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,5 +19,6 @@
     }
     .heavy {
         color: #fff;
+        font-weight: 800;
     }
 }
