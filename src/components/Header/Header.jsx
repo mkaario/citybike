@@ -1,12 +1,13 @@
 import { Fragment, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import NavigationList from '../NavigationList/NavigationList'
 import { populateJourneys } from '../../redux/slices/journeysSlice'
 import { populateStations } from '../../redux/slices/stationsSlice'
 import stationData from '../../dummy_data/stations.json'
 import journeyData from '../../dummy_data/journeys_long.json'
 import classes from './Header.module.scss'
+import HeaderMessage from '../HeaderMessage/HeaderMessage'
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -72,6 +73,9 @@ const Header = () => {
         formatStationData();
     }, [dispatch]);
 
+    const {pathname} = useLocation(); 
+    const journeysMessage = 'Sort journeys by clicking on the associated category you wish to see. Clicking again reverses the order.'
+    const stationsMessage = `See station details in addition to it's location on the map by selecting it from the list below.`
   return (
     <Fragment>
         <header className={classes.header}>
@@ -82,6 +86,8 @@ const Header = () => {
 
         </header>
         <NavigationList/>
+        {pathname === '/journeys' && <HeaderMessage message={journeysMessage}/>}
+        {pathname === '/stations' && <HeaderMessage message={stationsMessage}/>}
     </Fragment>
   )
 }

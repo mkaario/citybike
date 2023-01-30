@@ -1,0 +1,11 @@
+.header_message {
+    background: var(--theme-gray);
+    border-bottom: 1px dashed var(--theme-even-lighter-gray);
+    color: var(--theme-off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        padding: 0.5rem;
+    }
+}

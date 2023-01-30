@@ -1,7 +1,7 @@
 .journey_detail {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 1.5rem;
+    padding: 1rem 0;
     border-bottom: 1px dashed var(--theme-light-gray);
     * {
         padding: 0.5rem, 0.5rem;
