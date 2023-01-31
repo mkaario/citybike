@@ -1,5 +1,5 @@
-import {Fragment, useMemo} from 'react'
-import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api';
+import { Fragment, useMemo, useEffect, useState } from 'react'
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import { useSelector } from 'react-redux';
 import customMarker from '../../img/cb_mapicon.png'
 import classes from './MapView.module.scss'
@@ -16,6 +16,7 @@ const MapView = () => {
 }
 
 const Map = () => {
+    const [isMounted, setIsMounted] = useState(false);
     const station = useSelector((state) => state.storedStations.selectedStation);
     const journeys = useSelector((state) => state.storedJourneys.journeys);
     const journeysFromStation = journeys.filter((journey) => journey.departureStationNumber === station.id);
@@ -31,6 +32,8 @@ const Map = () => {
         origin: new google.maps.Point(0,0),
         anchor: new google.maps.Point(0,32)
     }
+    useEffect(() => {setIsMounted(true)},[]);
+
     return (
         <Fragment>
             <div className={classes.station_header_details}>
@@ -47,6 +50,7 @@ const Map = () => {
             defaultCenter={center}
             mapContainerClassName={classes.map_container}
             >
+                {isMounted && // I don't know why but the custom markers won't load on initial pass without this being under a conditional render, hence the hacky isMounted state
                 <Marker
                 name={station.nameFinnish}
                 title={station.osoite}
@@ -54,6 +58,7 @@ const Map = () => {
                 position={{lat: stationLat, lng: stationLng}}
                 icon={customIcon}
                 />
+                }
             </GoogleMap>
             <div className={classes.station_travel_details}>
                 <div>

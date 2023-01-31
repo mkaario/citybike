@@ -1,4 +1,4 @@
-import {populateJourneys} from '../slices/journeysSlice'
+import { populateJourneys } from '../slices/journeysSlice'
 
 export const getJourneysData = () => {
     return async (dispatch) => {
@@ -9,25 +9,26 @@ export const getJourneysData = () => {
                 throw new Error('Could not find journey data!')
             }
             const resData = await response.json();
-            const journeyData = []
+            
+            const journeysData = []
 
             for(const key in resData) {
                 if(resData[key]["Covered distance (m)"] > 10 &&
                 resData[key]["Duration (sec)"] > 10) {
-                    journeyData.push({
+                    journeysData.push({
                         id: Number([key]) +1,
                         distance: resData[key]["Covered distance (m)"],
                         duration: resData[key]["Duration (sec)"],
                         departureTime: resData[key]["Departure"],
-                        derpartureStationNumber: resData[key]["Departure station id"],
-                        departureStataionName: resData[key]["Departure station name"],
+                        departureStationNumber: resData[key]["Departure station id"],
+                        departureStationName: resData[key]["Departure station name"],
                         returnTime: resData[key]["Return"],
                         returnStationNumber: resData[key]["Return station id"],
                         returnStationName: resData[key]["Return station name"]
                     })
                 }
             }
-            return journeyData;
+            return journeysData;
         };
 
         try {

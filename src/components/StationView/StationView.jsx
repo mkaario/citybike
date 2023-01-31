@@ -15,7 +15,6 @@ const StationView = () => {
     const indexOfLastStation = currentPage * stationsPerPage;
     const indexOfFirstStation = indexOfLastStation - stationsPerPage;
     const currentStations = stations.slice(indexOfFirstStation, indexOfLastStation);
-    console.log(currentStations)
     const renderStations = () => 
         currentStations.map((station, i) => (
             <StationDetail 
