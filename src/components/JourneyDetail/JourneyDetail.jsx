@@ -3,7 +3,7 @@ import classes from './JourneyDetail.module.scss'
 
 const JourneyDetail = (props) => {
   return (
-    <div className={classes.journey_detail}>
+    <div className={classes.journey_detail} data-testid='journey_detail_container'>
         
         <h3>
             J<span className={classes.header_number}>{props.id}</span>

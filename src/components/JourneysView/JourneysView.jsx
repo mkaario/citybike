@@ -99,7 +99,6 @@ const JourneysView = () => {
                 <SortingHeader sorted={sorted} onClick={setDurationSort} title={'Duration (min)'} sortedBy={'duration'} />
                 <SortingHeader sorted={sorted} onClick={setFromSort} title={'From'} sortedBy={'departureStationNumber'} />
                 <SortingHeader sorted={sorted} onClick={setToSort} title={'To'} sortedBy={'returnStationNumber'} />
-
             </div>
 
             <Card className={classes.grid_card}>{renderJourneys()}</Card>

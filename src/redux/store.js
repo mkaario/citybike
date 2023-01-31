@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import journeysReducer from './slices/journeysSlice';
 import stationsReducer from './slices/stationsSlice';
 
@@ -17,4 +17,14 @@ const store = configureStore({
 export const journeysActions = journeysReducer.actions;
 export const stationsActions = stationsReducer.actions;
 
+const rootReducer = combineReducers({
+    storedJourneys: journeysReducer
+  })
+
+export const setupStore = preloadedState => {
+    return configureStore({
+      reducer: rootReducer,
+      preloadedState
+    })
+  }
 export default store

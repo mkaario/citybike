@@ -7,8 +7,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 const NavigationList = () => {
     return (
     <div className={classes.navigation_wrapper}>
-        <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/journeys'><DirectionsBikeIcon/>Journeys</NavLink>
-        <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/stations'>Stations<LocationOnIcon/></NavLink>
+        <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/journeys' data-testid='navlink'><DirectionsBikeIcon/>Journeys</NavLink>
+        <NavLink className={({isActive}) => isActive ? classes.active : undefined} to='/stations' data-testid='navlink'>Stations<LocationOnIcon/></NavLink>
     </div>
   )
 }
