@@ -4,7 +4,11 @@ import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import JourneysPage from './pages/JourneysPage';
 import StationsPage from './pages/StationsPage';
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { getJourneysData } from './redux/data-actions/journey-actions'
+import { getStationsData } from './redux/data-actions/station-actions'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +24,13 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getJourneysData());
+    dispatch(getStationsData());
+  },[dispatch])
+
+
   return (
     <RouterProvider router={router}/>
   );
