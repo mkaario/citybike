@@ -6,11 +6,17 @@ Project is not intended for production use of any kind, but strictly for showing
 
 # Configuration:
 
-You'll need either the Docker image or an .env file (provided separately) with API key for Google Maps feature to work. Otherwise you're all set.
+You'll need either the Docker image (DockerHub @ mkaario/citybikereactapp:latest) OR an .env file (provided separately) with API key for Google Maps feature to work if you're just cloning the GitHub repo. Otherwise you're all set. If you wish you can make an .env file with the sole content of: REACT_APP_GOOGLE_MAPS_API_KEY="<your personal key here>" and skip the request/email/etc.-part of the file juggling.
+
+Both GitHub (https://github.com/mkaario/citybike) and DockerHub "mkaario/citybikereactapp" are publicly visible for a limited time to ease the accessibility.
+
+Note that the Google Maps React API is a bit finicky with adblockers, so turning those off should fix unnecessary errors.
 
 # How to run the project:
 
-Npm script will get you there, "npm start" to boot the local instance up to port 3000 as per usual.
+1. A Linux/amd64 Docker image is provided at DockerHub public repository "mkaario/citybikereactapp" with the tag "latest". Running this will open the app at localhost, port 3000.
+
+2. Typical "npm install" after GitHub repo (https://github.com/mkaario/citybike) clone and, "npm start" to boot the local instance up to port 3000.
 
 # How to run tests:
 
@@ -18,13 +24,13 @@ Included in the npm scripts is the good old classic "npm test" which will run yo
 
 Considering the scope of the project and relative time constraints, I have included one unit test (NavigationList.test.js), one integration test (Journeyview.test.js) and one e2e (StationView.test.js) test.
 
-# Technology used: 
+# Technology used:
 
 Backend sits in a realtime database provided by Google Firebase.
 
 Frontend is a React project, with Redux Toolkit chosen for state management and React Router v6 sprinkled on to handle the routes/navigation.
 
-Provided for your convenience is also a Docker image which you can download from here:
+Docker to create a distributable image.
 
 # To do:
 
