@@ -22,7 +22,7 @@ Note that the Google Maps React API is a bit finicky with adblockers, so turning
 
 Included in the npm scripts is the good old classic "npm test" which will run you through the tests. Tests have been written using the React combination of Jest and React Testing Library.
 
-Considering the scope of the project and relative time constraints, I have included one unit test (NavigationList.test.js), one integration test (Journeyview.test.js) and one e2e (StationView.test.js) test.
+Considering the scope of the project and relative time constraints, I have included one unit test (NavigationList.test.js), one integration test (Journeyview.test.js).
 
 # Technology used:
 
@@ -37,6 +37,8 @@ Docker to create a distributable image.
 Allowing time:
 
 - Data crunching in the selected station part, expand the current function that finds the journeys associated with the station (that logic is alrady there, just extract the wanted specifics as per the assignment's optional list)
+
+- write a some more tests
 
 - Better mobile styles, right now it's responsive enough but nothing dedicated isn't really there. Implement normal 2/3 breakpoints maybe.
 
