@@ -4,7 +4,7 @@ import JourneysView from '../components/JourneysView/JourneysView'
 const JourneysPage = () => {
   return (
     <Fragment>
-        <div className='journeyspage_wrapper'>
+        <div className="journeys_wrapper">
             <JourneysView/>
         </div>
     </Fragment>

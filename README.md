@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Introduction to CityBike pre-assignment project for Solita:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the pre-assignment for Dev Academy 2023. This is a React project featuring Citybike datasets hosted in Firebase realtime database.
 
-## Available Scripts
+Project is not intended for production use of any kind, but strictly for showing development skills and readiness of the author with the recruitment process in mind.
 
-In the project directory, you can run:
+# Configuration:
 
-### `npm start`
+You'll need either the Docker image or an .env file (provided separately) with API key for Google Maps feature to work. Otherwise you're all set.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# How to run the project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Npm script will get you there, "npm start" to boot the local instance up to port 3000 as per usual.
 
-### `npm test`
+# How to run tests:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Included in the npm scripts is the good old classic "npm test" which will run you through the tests. Tests have been written using the React combination of Jest and React Testing Library.
 
-### `npm run build`
+Considering the scope of the project and relative time constraints, I have included one unit test (NavigationList.test.js), one integration test (Journeyview.test.js) and one e2e (StationView.test.js) test.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Technology used: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend sits in a realtime database provided by Google Firebase.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend is a React project, with Redux Toolkit chosen for state management and React Router v6 sprinkled on to handle the routes/navigation.
 
-### `npm run eject`
+Provided for your convenience is also a Docker image which you can download from here:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# To do:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Allowing time:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Data crunching in the selected station part, expand the current function that finds the journeys associated with the station (that logic is alrady there, just extract the wanted specifics as per the assignment's optional list)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Better mobile styles, right now it's responsive enough but nothing dedicated isn't really there. Implement normal 2/3 breakpoints maybe.
 
-## Learn More
+- Fancy loading spinners (veeery important)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Maybe make a ui-actions slice for displaying possible data fetching errors in the UI.
