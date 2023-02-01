@@ -6,7 +6,7 @@ Project is not intended for production use of any kind, but strictly for showing
 
 # Configuration:
 
-You'll need either the Docker image (DockerHub @ mkaario/citybikereactapp:latest) OR an .env file (provided separately) with API key for Google Maps feature to work if you're just cloning the GitHub repo. Otherwise you're all set. If you wish you can make an .env file with the sole content of: REACT_APP_GOOGLE_MAPS_API_KEY="yourkeyhere" and skip the request/email/etc.-part of the file juggling.
+You'll need either the Docker image (DockerHub @ mkaario/citybikereactapp:latest) OR an .env file (provided separately) with API key for Google Maps feature to work if you're just cloning the GitHub repo. Otherwise you're all set. **The easiest way to go about it, is to make an .env file with the sole content of: REACT_APP_GOOGLE_MAPS_API_KEY="yourkeyhere"** and skip the request/email/etc.-part of the file juggling.
 
 Both GitHub (https://github.com/mkaario/citybike) and DockerHub "mkaario/citybikereactapp" are publicly visible for a limited time to ease the accessibility.
 
@@ -14,7 +14,7 @@ Note that the Google Maps React API is a bit finicky with adblockers, so turning
 
 # How to run the project:
 
-1. A Linux/amd64 Docker image is provided at DockerHub public repository "mkaario/citybikereactapp" with the tag "latest". Running this will open the app at localhost, port 3000.
+1. A **Linux/amd64** Docker image is provided at DockerHub public repository "mkaario/citybikereactapp" with the tag "latest". Running this will open the app at localhost, port 3000.
 
 2. Typical "npm install" after GitHub repo (https://github.com/mkaario/citybike) clone and, "npm start" to boot the local instance up to port 3000.
 
