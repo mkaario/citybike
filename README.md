@@ -6,7 +6,7 @@ Project is not intended for production use of any kind, but strictly for showing
 
 # Configuration:
 
-You'll need either the Docker image (DockerHub @ mkaario/citybikereactapp:latest) OR an .env file (provided separately) with API key for Google Maps feature to work if you're just cloning the GitHub repo. Otherwise you're all set. If you wish you can make an .env file with the sole content of: REACT_APP_GOOGLE_MAPS_API_KEY="<your personal key here>" and skip the request/email/etc.-part of the file juggling.
+You'll need either the Docker image (DockerHub @ mkaario/citybikereactapp:latest) OR an .env file (provided separately) with API key for Google Maps feature to work if you're just cloning the GitHub repo. Otherwise you're all set. If you wish you can make an .env file with the sole content of: REACT_APP_GOOGLE_MAPS_API_KEY="yourkeyhere" and skip the request/email/etc.-part of the file juggling.
 
 Both GitHub (https://github.com/mkaario/citybike) and DockerHub "mkaario/citybikereactapp" are publicly visible for a limited time to ease the accessibility.
 
