@@ -28,3 +28,17 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .station_wrapper {
+        font-size: 0.7rem;
+        .grid_card {
+            .station_detail {
+                h3 {
+                    font-size: 0.7rem;
+                }  
+            } 
+        }
+
+    }
+}

@@ -22,7 +22,7 @@ const StationDetail = (props) => {
     }
 
   return (
-    <div data-index={props.mapId} onClick={handleStationClick} className={`${classes.station_detail} divhook`}>
+    <div data-index={props.mapId} data-testid='station_detail_container' onClick={handleStationClick} className={`${classes.station_detail} divhook`}>
         <h3>
             S<span className={classes.header_number}>{props.mapId}</span>
         </h3>

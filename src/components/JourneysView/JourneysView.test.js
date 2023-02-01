@@ -7,7 +7,7 @@ import JourneysView from './JourneysView'
 
 export const handlers = [
   rest.get('/api/user', (req, res, ctx) => {
-    return res(ctx.json('John Smith'), ctx.delay(150))
+    return res(ctx.json('Nice dummy response'), ctx.delay(150))
   })
 ]
 
