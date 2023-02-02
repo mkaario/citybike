@@ -36,9 +36,9 @@ Docker to create a distributable image.
 
 Allowing time:
 
-- Data crunching in the selected station part, expand the current function that finds the journeys associated with the station (that logic is alrady there, just extract the wanted specifics as per the assignment's optional list)
+- WRITE MORE TESTS (this is why TDD approach is starting to feel like an excellent idea)
 
-- write a some more tests
+- Data crunching in the selected station part, expand the current function that finds the journeys associated with the station (that logic is alrady there, just extract the wanted specifics as per the assignment's optional list)
 
 - Better mobile styles, right now it's responsive enough but nothing dedicated isn't really there. Implement normal 2/3 breakpoints maybe.
 
