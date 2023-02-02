@@ -17,7 +17,7 @@ const store = configureStore({
 export const journeysActions = journeysReducer.actions;
 export const stationsActions = stationsReducer.actions;
 
-// Below for testing purposes
+// Below for tests, somewhat redundant, could refactor to use the above instead.
 
 const rootReducer = combineReducers({
   storedJourneys: journeysReducer,
