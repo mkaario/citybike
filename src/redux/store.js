@@ -1,30 +1,33 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import journeysReducer from './slices/journeysSlice';
-import stationsReducer from './slices/stationsSlice';
+import journeysReducer from "./slices/journeysSlice";
+import stationsReducer from "./slices/stationsSlice";
 
 const store = configureStore({
-    reducer: {
-        storedJourneys: journeysReducer,
-        storedStations: stationsReducer
-    },
-    middleware: (getDefaultMiddleware) =>
+  reducer: {
+    storedJourneys: journeysReducer,
+    storedStations: stationsReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-        immutableCheck: false,
-        serializableCheck: false
-    })
-})
+      immutableCheck: false,
+      serializableCheck: false,
+    }),
+});
 
 export const journeysActions = journeysReducer.actions;
 export const stationsActions = stationsReducer.actions;
 
-const rootReducer = combineReducers({
-    storedJourneys: journeysReducer
-  })
+// Below for testing purposes
 
-export const setupStore = preloadedState => {
-    return configureStore({
-      reducer: rootReducer,
-      preloadedState
-    })
-  }
-export default store
+const rootReducer = combineReducers({
+  storedJourneys: journeysReducer,
+  storedStations: stationsReducer,
+});
+
+export const setupStore = (preloadedState) => {
+  return configureStore({
+    reducer: rootReducer,
+    preloadedState,
+  });
+};
+export default store;

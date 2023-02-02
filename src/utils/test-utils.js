@@ -1,8 +1,8 @@
-import React from 'react'
-import { render } from '@testing-library/react'
-import { Provider } from 'react-redux'
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
 
-import { setupStore } from '../redux/store'
+import { setupStore } from "../redux/store";
 
 export function renderWithProviders(
   ui,
@@ -13,7 +13,7 @@ export function renderWithProviders(
   } = {}
 ) {
   function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>
+    return <Provider store={store}>{children}</Provider>;
   }
-  return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) }
+  return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
 }
