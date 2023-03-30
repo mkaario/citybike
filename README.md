@@ -4,13 +4,13 @@ This is a React example project, based on Solita dev academy preassignment.
 
 # Configuration:
 
-No extra configuration needed unless you want to grab the project and run it locally, in which case you'll want to check the enviromental variable (just a Google API key necessary).
+No extra configuration needed unless you want to grab the project and run it locally, in which case you'll want to check the enviromental variables (just a Google API key necessary).
 
 Note that the Google Maps React API is a bit finicky with adblockers, so turning those off should fix unnecessary errors.
 
 # How to run the project:
 
-Project is deployed @ Vercel right now for ease of access.
+Project is deployed @ Vercel ( https://citybike.vercel.app/ ) right now for ease of access.
 
 # How to run tests:
 
@@ -32,7 +32,7 @@ Allowing time:
 
 - Data crunching in the selected station part, expand the current function that finds the journeys associated with the station (that logic is already there, just extract the wanted specifics as per the assignment's optional list)
 
-- optionally rewrite the project as NextJS and build proper APIs for backend.
+- optionally rewrite the project as NextJS and instead build proper APIs for backend.
 
 - Better mobile styles, right now it's responsive enough but nothing dedicated isn't really there. Implement normal 2/3 breakpoints maybe.
 
